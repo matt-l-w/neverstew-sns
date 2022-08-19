@@ -11,6 +11,7 @@
   "author": "Matthew Williams",
   "license": "ISC",
   "devDependencies": {
+    "@veiss-com/sw-tools": "^1.1.3",
     "concurrently": "^7.3.0",
     "tailwindcss": "^3.1.8"
   }

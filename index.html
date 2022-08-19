@@ -12,12 +12,19 @@
     <script src="https://unpkg.com/dayjs@1.8.21/plugin/dayOfYear.js"></script>
     <link rel="preconnect" href="https://fonts.bunny.net" />
     <link
-      href="https://fonts.bunny.net/css?family=alfa-slab-one:400"
-      rel="stylesheet"
+    href="https://fonts.bunny.net/css?family=alfa-slab-one:400"
+    rel="stylesheet"
     />
-    <script>
+    <script src="/swTools.min.js"></script>
+    <script type="module">
       dayjs().format();
       dayjs.extend(window.dayjs_plugin_dayOfYear);
+      
+      swTools = new swTools('/sw.min.js', {
+        offline: {
+          page: 'offline',
+        },
+      });
     </script>
     <link href="/output.css" rel="stylesheet" />
   </head>

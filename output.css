@@ -551,6 +551,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.static {
+  position: static;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -570,6 +574,10 @@ video {
 
 .max-w-md {
   max-width: 28rem;
+}
+
+.resize {
+  resize: both;
 }
 
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
@@ -630,4 +638,8 @@ video {
 
 .tracking-tighter {
   letter-spacing: -0.05em;
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
