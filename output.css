@@ -587,9 +587,9 @@ video {
   background-color: rgb(254 215 170 / var(--tw-bg-opacity));
 }
 
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .px-2 {
