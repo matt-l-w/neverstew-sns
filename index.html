@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neverstew S&S Timer</title>
+  <script src="//unpkg.com/alpinejs" defer></script>
+  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+  <script src="https://unpkg.com/dayjs@1.8.21/plugin/dayOfYear.js"></script>
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=alfa-slab-one:400" rel="stylesheet" />
+  <script>
+    dayjs().format()
+    dayjs.extend(window.dayjs_plugin_dayOfYear)
+  </script>
+  <link href="/output.css" rel="stylesheet">
+</head>
+<body class="bg-orange-200">
+  <main
+    class="mx-auto max-w-md h-screen overflow-hidden"
+    x-data="{
+      start: dayjs('2022-08-16'),
+      day: dayjs().diff('2022-08-16', 'day'),
+      weight: 16,
+    }"
+  >
+    <section class="py-12 px-2">
+      <h1 class="space-y-1 text-center">
+        <span class="block uppercase text-lg font-bold tracking-tighter">Day</span>
+        <span x-text="day" class="block text-8xl font-display"></span>
+      </h1>
+      <h1 class="space-y-1 text-center">
+        <span class="block uppercase text-lg font-bold tracking-tighter">Weight</span>
+        <div class="font-display">
+          <span x-text="weight" class="text-8xl"></span>
+          <span class="text-5xl">kg</span>
+        </div>
+      </h1>
+      <h1
+        class="space-y-1 text-center mt-24"
+        x-data="{
+          twoArm: day % 3 === 0
+        }"
+      >
+        <span class="block uppercase text-lg font-bold tracking-tighter">
+          <span x-show="twoArm">2 arm swings</span>
+          <span x-show="!twoArm">1 arm swings</span>
+        </span>
+        <span class="block text-8xl font-display">100</span>
+      </h1>
+      <h1 class="space-y-1 text-center">
+        <span class="block uppercase text-lg font-bold tracking-tighter">Get Ups</span>
+        <span class="block text-8xl font-display">10</span>
+      </h1>
+    </section>
+  </main>
+</body>
+</html>
